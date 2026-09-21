@@ -18,8 +18,14 @@ public class Biblio {
     public void ajouteLivre(Livre nom){
         livres.add(nom);
     }
-    public void afficherLivres(){
-        System.out.print("Livres dans la bibliotheque " + livres);
+    
+    public void afficher() {
+        System.out.println("Nom de la bibliotheque : " + nom);
+        System.out.println("Livres : ");
+        for (Livre livre : livres) {
+            livre.afficher();
+            System.out.println();
+        }
     }
-    public 
+    
 }
