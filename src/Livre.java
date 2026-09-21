@@ -42,6 +42,6 @@ public abstract class Livre {
     }
 
     public Arraylist<Exemplaire> getExemplaire {
-        
+        dsf        
     }
 }
