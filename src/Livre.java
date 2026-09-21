@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.io.Serializable;
+
 
 public abstract class Livre {
     private String titre;
@@ -42,6 +44,24 @@ public abstract class Livre {
     }
 
     public Arraylist<Exemplaire> getExemplaire {
-        dsf        
+             getExemplaires(){
+                return exemplaires;
+             }
     }
+
+    public void setExemplaires(ArrayList< Exemplaire> exempalaires){
+        this.exemplaires = exemplaires;
+    }
+
+    public void ajouterexEmplaire(Exemplaire exemplaire){
+        exemplaires.remove(exemplaire);
+    }
+
+    public void supprimerExemplaire(Exemplaire exemplaire){
+        exemplaires.remove(exemplaire);
+    }
+
+
+    public abstract void afficher();
+
 }
