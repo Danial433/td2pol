@@ -12,7 +12,9 @@ public class Roman extends Livre {
 
     @Override
     public void afficher() {
-        super.afficher();
+        System.out.println("Titre : "+getTitre()) ;
+        System.out.println("Auteur : "+getAuteur());
+        System.out.println("ISBN : "+getIsbn());
         System.out.println("Genre : "+genre);
     }
 }

@@ -1,7 +1,7 @@
 public class Journal extends Livre {
     private String numeroParution;
 
-    public Roman(String titre, String auteur, String isbn, String numeroParution) {
+    public Journal(String titre, String auteur, String isbn, String numeroParution) {
         super(titre, auteur, isbn);
         this.numeroParution = numeroParution;
     }
@@ -12,7 +12,9 @@ public class Journal extends Livre {
 
     @Override
     public void afficher() {
-        super.afficher();
+        System.out.println("Titre : "+getTitre()) ;
+        System.out.println("Auteur : "+getAuteur());
+        System.out.println("ISBN : "+getIsbn());
         System.out.println("Numero Parution : "+numeroParution);
     }
 }

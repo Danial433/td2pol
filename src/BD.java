@@ -1,7 +1,7 @@
 public class BD extends Livre {
     private String dessinateur;
 
-    public Roman(String titre, String auteur, String isbn, String dessinateur) {
+    public BD (String titre, String auteur, String isbn, String dessinateur) {
         super(titre, auteur, isbn);
         this.dessinateur = dessinateur;
     }
@@ -12,7 +12,9 @@ public class BD extends Livre {
 
     @Override
     public void afficher() {
-        super.afficher();
+        System.out.println("Titre : "+getTitre()) ;
+        System.out.println("Auteur : "+getAuteur());
+        System.out.println("ISBN : "+getIsbn());
         System.out.println("Dessinateur : "+dessinateur);
     }
 }
