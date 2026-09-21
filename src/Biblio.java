@@ -71,5 +71,20 @@ public class Biblio {
         return "Livre non trouvé.";
     }
 
+    public void chercherLivreParType(Class<?> type) {
+        boolean trouve=false;
+        System.out.println("Materiel trouvé de ce type: ");
+        for (Livre m:livres) {
+            if(m.getClass().equals(type)) {
+                m.afficher();
+                trouve=true;
+            }
+
+        }
+        if(!trouve) {
+            System.out.println(" aucun materiel de ce type...");
+        }
+    }
+
 
 }
