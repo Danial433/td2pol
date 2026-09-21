@@ -59,6 +59,17 @@ public class Biblio {
 
         return false;
     }
+    public String modifierLivre(String isbn , String nouveauTitre, String nouvelAuteur){
+        Livre livre = rechercherLivre(isbn);
+
+        if(livre != null){
+            livre.setTitre(nouveauTitre);
+            livre.setAuteur(nouvelAuteur);
+            return "Livre modifié avec succès.";
+        }
+
+        return "Livre non trouvé.";
+    }
 
 
 }
