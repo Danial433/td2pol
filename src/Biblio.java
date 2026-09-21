@@ -5,7 +5,7 @@ public class Biblio {
     
     public Biblio(String nom) {
         this.nom = nom;
-        this.livres = new ArrayList<>();
+        livres = new ArrayList<>();
     }
     public String getNom() {
         return nom;
