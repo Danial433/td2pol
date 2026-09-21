@@ -1,8 +1,8 @@
-import java.util.ArrayList;
 import java.io.Serializable;
+import java.util.ArrayList;
 
+public abstract class Livre implements Serializable {
 
-public abstract class Livre {
     private String titre;
     private String auteur;
     private String isbn;
@@ -13,55 +13,43 @@ public abstract class Livre {
         this.auteur = auteur;
         this.isbn = isbn;
         this.exemplaires = new ArrayList<>();
-
     }
 
-    public String getTitre(){
+    public String getTitre() {
         return titre;
     }
 
-    public void setTitre(String titre){
-        this.titre = titre;
-    
-    }
-
-    public String getAuteur(){
+    public String getAuteur() {
         return auteur;
-
     }
 
-    public void setAuteur(String auteur){
-        this.auteur = auteur;
-
-    }
-
-    public String getIsbn(){
+    public String getIsbn() {
         return isbn;
     }
 
-    public void setIsbn(String isbn){
+    public void setTitre(String titre) {
+        this.titre = titre;
+    }
+
+    public void setAuteur(String auteur) {
+        this.auteur = auteur;
+    }
+
+    public void setIsbn(String isbn) {
         this.isbn = isbn;
     }
 
-    public Arraylist<Exemplaire> getExemplaire {
-             getExemplaires(){
-                return exemplaires;
-             }
+    public ArrayList<Exemplaire> getExemplaires() {
+        return exemplaires;
     }
 
-    public void setExemplaires(ArrayList< Exemplaire> exempalaires){
-        this.exemplaires = exemplaires;
+    public void ajouterExemplaire(Exemplaire exemplaire) {
+        exemplaires.add(exemplaire);
     }
 
-    public void ajouterexEmplaire(Exemplaire exemplaire){
+    public void supprimerExemplaire(Exemplaire exemplaire) {
         exemplaires.remove(exemplaire);
     }
-
-    public void supprimerExemplaire(Exemplaire exemplaire){
-        exemplaires.remove(exemplaire);
-    }
-
 
     public abstract void afficher();
-
 }
