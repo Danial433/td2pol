@@ -51,5 +51,11 @@ public abstract class Livre implements Serializable {
         exemplaires.remove(exemplaire);
     }
 
+    public void afficherExemplaires(){
+        for (Exemplaire exemplaire : exemplaires){
+            exemplaire.afficher();
+        }
+    }
+
     public abstract void afficher();
 }

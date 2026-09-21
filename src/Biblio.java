@@ -1,4 +1,9 @@
 import java.util.ArrayList;
+import java.io.FileOutputStream;
+import java.io.FileInputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+
 public class Biblio {
     public String nom;
     public ArrayList<Livre>livres;
