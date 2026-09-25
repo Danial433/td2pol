@@ -308,7 +308,7 @@ public class App {
                     break;
                 
                 case "12" :
-                    biblio1.charger("biblio.data");
+                    biblio1 = Biblio.charger("biblio.data");
                     break;
                 
                 case "Q":
