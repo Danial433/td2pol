@@ -21,6 +21,9 @@ public class App {
             System.out.println("7. Ajouter un exemplaire");
             System.out.println("8. Prêter un exemplaire");
             System.out.println("9. Rendre un exemplaire");
+            System.out.println("10. Sauvegarder bibliotheque en JSON");
+            System.out.println("11. Sauvegarder bibliotheque");
+            System.out.println("12. Charger bibliotheque");
             System.out.println("Q. Quit");
             System.out.println("Votre choix : ");
 
@@ -295,7 +298,19 @@ public class App {
                         System.out.println("Livre introuvable.");
                     }
                     break;
-
+                
+                case "10" :
+                    biblio1.sauvergarderJSON("biblio.json");
+                    break;
+                
+                case "11" :
+                    biblio1.sauvergarder("biblio.data");
+                    break;
+                
+                case "12" :
+                    biblio1.charger("biblio.data");
+                    break;
+                
                 case "Q":
                 case "q":
                     System.out.println("Au revoir !");

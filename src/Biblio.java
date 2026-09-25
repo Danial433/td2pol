@@ -117,7 +117,7 @@ public class Biblio implements Serializable {
 
     }
 
-        public static Biblio charger(String fichier){
+        public Biblio charger(String fichier){
             try {
                 FileInputStream fis = new FileInputStream(fichier);
                 ObjectInputStream ois = new ObjectInputStream(fis);
@@ -190,6 +190,8 @@ public class Biblio implements Serializable {
                 fichierJSON.write(objetBiblio.toString());
 
                 fichierJSON.close();
+
+                System.out.println("Bibliotheque sauvegardé en JSON dans biblio.json");
 
             } catch (Exception e) {
                 System.out.println("erreur lors de la sauvergarde");
